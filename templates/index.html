@@ -1,1 +1,82 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload Example</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #F9F9F9;
+      }
+      h1 {
+        text-align: center;
+        color: #444444;
+      }
+      form {
+        margin: 50px auto;
+        width: 80%;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #CCCCCC;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px #CCCCCC;
+        flex-direction: column;
+        align-items: left;
+      }
+      label {
+        font-size: 18px;
+        color: #444444;
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type=file] {
+        font-size: 16px;
+        color: #444444;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 5px #CCCCCC;
+      }
+      input[type=submit] {
+        font-size: 18px;
+        color: #FFFFFF;
+        background-color: #444444;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 20px;
+      }
+      input[type=submit]:hover {
+        background-color: #555555;
+      }
+      a {
+        font-size: 18px;
+        color: #FFFFFF;
+        background-color: #444444;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 20px;
+        display: inline-block;
+      }
+      a:hover {
+        background-color: #555555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Clame's WiFi File Upload Portal</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <label for="file">Choose one or more files to upload:</label>
+      <input type="file" name="file" id="file" multiple><br>
+      <input type="submit" value="Upload">
+      <a href="/download">Download files</a>
+    </form>
+  </body>
+</html>
