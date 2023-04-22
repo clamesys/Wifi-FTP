@@ -72,7 +72,7 @@
   </head>
   <body>
     <h1>Clame's WiFi File Upload Portal</h1>
-    <form action="/" method="post" enctype="multipart/form-data">
+    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
       <label for="file">Choose one or more files to upload:</label>
       <input type="file" name="file" id="file" multiple><br>
       <input type="submit" value="Upload">
