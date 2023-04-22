@@ -31,9 +31,6 @@
       a:hover {
         background-color: #CCCCCC;
       }
-      form {
-        display: none;
-      }
       #upload-button {
         display: block;
         margin: 30px auto;
@@ -56,15 +53,27 @@
     {% if files %}
       <ul>
         {% for file in files %}
-          <li><a href="#" onclick="document.getElementById('filename').value='{{ file }}'; document.getElementById('download-form').submit();">{{ file }}</a></li>
+          <li><a href="#" class="download-link" data-filename="{{ file }}">{{ file }}</a></li>
         {% endfor %}
       </ul>
     {% else %}
       <p>No files to download.</p>
     {% endif %}
     <form id="download-form" action="/download" method="post">
-      <input type="hidden" name="filename" id="filename">
+      <input type="hidden" name="filename" id="filename-input">
     </form>
     <a href="/" id="upload-button">Upload Files</a>
+    <script>
+      const downloadLinks = document.querySelectorAll('.download-link');
+      const filenameInput = document.getElementById('filename-input');
+      downloadLinks.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const filename = link.dataset.filename;
+          filenameInput.value = filename;
+          document.getElementById('download-form').submit();
+        });
+      });
+    </script>
   </body>
 </html>
