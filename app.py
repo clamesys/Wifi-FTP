@@ -2,6 +2,7 @@
 
 import os
 import socket
+import webbrowser
 from waitress import serve
 from flask import Flask, request, render_template, send_from_directory, url_for
 
@@ -18,7 +19,7 @@ app.config['TIMEOUT'] = 1200
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.connect(("8.8.8.8", 80))
 a=(sock.getsockname())
-print("http://"+a[0]+"/")
+url="http://"+a[0]+"/"
 sock.close()
 
 # To automatically make the uploads dir if not present in the same dir as the app.py
@@ -54,6 +55,13 @@ def download_file():
     files = os.listdir(app.config['TODOWNLOAD_FOLDER'])
     return render_template('download.html', files=files)
 
+# To shutdown server
+
+@app.route('/shutdown', methods=['GET', 'POST'])
+def shutdown():
+    # sys.exit()
+    os._exit(os.getpid())
+
 # Development Server
 
 # if __name__ == '__main__':
@@ -62,4 +70,5 @@ def download_file():
 # Production server
 
 if __name__ == "__main__":
+    webbrowser.open_new_tab(url) 
     serve(app, host="0.0.0.0", port=80)
