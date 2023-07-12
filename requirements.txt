@@ -1,3 +1,5 @@
+os
 flask
 socket
 waitress
+webbrowser
