@@ -59,7 +59,7 @@ def download_file():
 
 @app.route('/shutdown', methods=['GET', 'POST'])
 def shutdown():
-    # sys.exit()
+    # sys.exit() to end the flask server
     os._exit(os.getpid())
 
 # Development Server
