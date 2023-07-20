@@ -28,7 +28,7 @@ Can also be used from a mobile hotspot. Sharing files is not just limited to the
 ## Dependencies
 
 **The script requires the following dependencies to be installed on your system:**
-(`pip install -r requirements.txt` already installs all the required dependencies)
+  (`pip install -r requirements.txt` already installs all the required dependencies)
 1. os
 2. flask
 3. socket
