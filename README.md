@@ -30,13 +30,13 @@ Can also be used from a mobile hotspot. Sharing files is not just limited to the
 
 **The script requires the following dependencies to be installed on your system:**
 
-(`pip install -r requirements.txt` already installs all the required dependencies)
+- os
+- flask
+- socket
+- waitress
+- webbrowser
 
-1.  os
-2.  flask
-3.  socket
-4.  waitress
-5.  webbrowser
+(`pip install -r requirements.txt` already installs all the required dependencies)
 
 ## Compatibility
 
