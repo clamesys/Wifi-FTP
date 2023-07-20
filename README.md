@@ -38,7 +38,7 @@ Can also be used from a mobile hotspot. Sharing files is not just limited to the
 ## Compatibility
 
 The script has been tested on Windows, Ubuntu, Kali, Arch, Mint, etc. It should work on other Linux-based operating systems as well.
-Might aswell be operable on MacOs, **Not tested yet**.
+Might aswell be operable on MacOs **(Not tested yet)**
 
 ## Screenshot
 
