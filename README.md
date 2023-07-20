@@ -1,11 +1,52 @@
 # Wifi-FTP
-## To install
-``pip install -r requirements.txt``
-## To run
-``python app.py``  
-**or**  
-Use the compliled executable from the releases tab.
-## To shutdown server
-Press the shutdown button on the webpage  
-**or**  
-`route to http://[your ip]/shutdown`
+
+Wifi-FTP is a web-interfaced software written in python and html. The purpose is to transfer files using Wifi or over Lan using ethernet, with the use of Intranet. Using a micro web framework called Flask, data can be transfered from the host computer.
+
+Can also be used from a mobile hotspot. Sharing files is not just limited to the Desktop/Laptop platform, the webpage can also be accessed from mobile/android device  
+## How to Use
+1. Run the script or the executable
+2. The code makes 2 folders in the same directory as the running script/executable
+3. **Uploads** and **toget** folders are created
+4. **Uploads** folder keeps the files that have been uploaded using the webpage
+5. **toget** folder is where you will keep all the files, you want people to access from the webpage **Download Files** option
+
+## Usage
+
+**To use the script, follow these steps:**
+
+1. Clone the repository using `git clone https://github.com/clamesys/Wifi-FTP.git`
+2. Navigate to the cloned repository using `cd Wifi-FTP`
+3. Install the python modules `pip install -r requirements.txt`
+4. Run the script using `python app.py`
+5. Press shutdown button to kill the server process **or** route to `http://[your ip]/shutdown`
+
+**Alternative**
+
+**Use the compliled executable from the releases tab for windows.**
+(be sure to us ethe latest release)
+
+## Dependencies
+
+**The script requires the following dependencies to be installed on your system:**
+(`pip install -r requirements.txt` already installs all the required dependencies)
+1. os
+2. flask
+3. socket
+4. waitress
+5. webbrowser
+
+## Compatibility
+
+The script has been tested on Windows, Ubuntu, Kali, Arch, Mint, etc. It should work on other Linux-based operating systems as well.
+Might aswell be operable on MacOs, **Not tested yet**.
+
+## Screenshot
+
+![Screenshot](https://i.postimg.cc/rmRcSxZx/wifi-FTP-ss2.png)
+
+## Contact
+
+If you have any questions or feedback, feel free to contact me:
+
+- Telegram: [@ClameSys](https://t.me/ClameSys)
+- Instagram: [@clame_sys](https://www.instagram.com/clame_sys/)
