@@ -44,9 +44,7 @@ The script has been tested on Windows, Ubuntu, Kali, Arch, Mint, etc. It should 
 Might aswell be operable on MacOs, **Not tested yet**.
 
 ## Screenshot
-
-![Screenshot](https://i.postimg.cc/rmRcSxZx/wifi-FTP-ss2.png)
-
+![Screenshot](https://gcdnb.pbrd.co/images/lYFQ0Trh85QT.png)
 ## Contact
 
 If you have any questions or feedback, feel free to contact me:
