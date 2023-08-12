@@ -1,5 +1,3 @@
-#modules required
-
 import os
 import socket
 import webbrowser
@@ -27,8 +25,6 @@ sock.close()
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
-# To automatically make the toget dir if not present in the same dir as the app.py
-
 if not os.path.exists(app.config['TODOWNLOAD_FOLDER']):
     os.makedirs(app.config['TODOWNLOAD_FOLDER'])
 
@@ -51,15 +47,15 @@ def upload_file():
 def download_file():
     if request.method == 'POST':
         filename = request.form.get('filename')
-        return send_from_directory(app.config['TODOWNLOAD_FOLDER'], filename, as_attachment=True)
-    files = os.listdir(app.config['TODOWNLOAD_FOLDER'])
+        return send_from_directory(os.path.abspath('toget'), filename, as_attachment=True)
+    files = os.listdir('toget')
     return render_template('download.html', files=files)
 
 # To shutdown server
 
 @app.route('/shutdown', methods=['GET', 'POST'])
 def shutdown():
-    # sys.exit() to end the flask server
+    # sys.exit()
     os._exit(os.getpid())
 
 # Development Server

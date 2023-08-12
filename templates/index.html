@@ -38,8 +38,7 @@
         background-color: #FFFFFF;
         box-shadow: 0 0 5px #CCCCCC;
       }
-      input[type=submit],
-      a {
+      input[type=submit] {
         font-size: 18px;
         color: #FFFFFF;
         background-color: #444444;
@@ -49,16 +48,25 @@
         cursor: pointer;
         transition: background-color 0.3s ease-in-out;
         margin-top: 20px;
-        display: inline-block;
-        text-decoration: none;
       }
-      input[type=submit]:hover,
-      a:hover {
+      input[type=submit]:hover {
         background-color: #555555;
       }
-      .button-container {
-        display: flex;
-        justify-content: space-between;
+      a {
+        font-size: 18px;
+        color: #FFFFFF;
+        background-color: #444444;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 20px;
+        display: inline-block;
+      }
+      a:hover {
+        background-color: #555555;
       }
     </style>
   </head>
@@ -67,11 +75,8 @@
     <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
       <label for="file">Choose one or more files to upload:</label>
       <input type="file" name="file" id="file" multiple><br>
-      <div class="button-container">
-        <input type="submit" value="Upload">
-        <a href="/download">Download files</a>
-        <a href="/shutdown">Shutdown</a>
-      </div>
+      <input type="submit" value="Upload">
+      <a href="/download">Download files</a>
     </form>
   </body>
 </html>
