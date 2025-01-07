@@ -43,8 +43,8 @@ Can also be used from a mobile hotspot. Sharing files is not just limited to the
 The script has been tested on Windows, Ubuntu, Kali, Arch, Mint, etc. It should work on other Linux-based operating systems as well.
 Might aswell be operable on MacOs, **Not tested yet**.
 
-## Screenshot
-![Screenshot](https://gcdnb.pbrd.co/images/lYFQ0Trh85QT.png)
+## Dashboard Preview
+![Dashboard Preview](images/dashboard.png)
 ## Contact
 
 If you have any questions or feedback, feel free to contact me:
