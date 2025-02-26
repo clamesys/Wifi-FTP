@@ -8,23 +8,26 @@ Can also be used from a mobile hotspot. Sharing files is not just limited to the
 
 **To install and use the script, follow these steps:**
 
-1.  Clone the repository using `git clone https://github.com/clamesys/Wifi-FTP.git`
-2.  Navigate to the cloned repository using `cd Wifi-FTP`
-3.  Install the python modules `pip install -r requirements.txt`
-4.  Run the script using `python app.py`
-5.  Press shutdown button to kill the server process **or** route to `http://[your ip]/shutdown`
-
-**Alternative**
-
-- Use the compliled executable from the releases tab for windows. (be sure to use the latest release)
-
-## How to Use
-
-- Run the script or the executable
-    - **Uploads** and **toget** folders are created
-    - The code makes 2 folders in the same directory as the running script/executable
-- **Uploads** folder keeps the files that have been uploaded using the webpage
-- **toget** folder is where you will keep all the files, you want people to access from the webpage **Download Files** option
+1.  Clone the repository using:
+```
+git clone https://github.com/clamesys/Wifi-FTP.git
+```
+2.  Navigate to the cloned repository using:
+```
+cd Wifi-FTP
+```
+3.  Install the python modules:
+```
+pip install -r requirements.txt
+```
+4.  Run the script using:
+```
+python app.py
+```
+5.  Press shutdown button to kill the server process **or** route to:
+```
+http://[your ip]/shutdown
+```
 
 ## Dependencies
 
@@ -37,6 +40,18 @@ Can also be used from a mobile hotspot. Sharing files is not just limited to the
 - webbrowser
 
 (`pip install -r requirements.txt` already installs all the required dependencies)
+
+**Alternative**
+
+- Use the compliled executable from the releases tab for windows. (be sure to use the latest release)
+
+## How to Use
+
+- Run the script or the executable
+    - **Uploads** and **toget** folders are created
+    - The code makes 2 folders in the same directory as the running script/executable
+- **Uploads** folder keeps the files that have been uploaded using the webpage
+- **toget** folder is where you will keep all the files, you want people to access from the webpage **Download Files** option
 
 ## Compatibility
 
